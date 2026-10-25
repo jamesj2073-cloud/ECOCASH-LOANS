@@ -45,7 +45,7 @@ document.querySelector('#enquiryForm').addEventListener('submit', event => {
     `Purpose: ${data.get('purpose') || 'Not provided'}`,
     `Calculator amount: ${money(Number(amount.value))}`,
     `Term: ${term.value} months`
-  ].join('\\n');
+  ].join('\n');
   const message = document.querySelector('#formMessage');
   message.textContent = summary;
   message.classList.add('show');
