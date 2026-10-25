@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0866f5">
+  <title>EcoCash Loans | Simple loan enquiries</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="menu-button" id="menuButton" aria-label="Open menu">☰</button>
+    <a class="brand" href="#" aria-label="EcoCash Loans home">EcoCash <span>Loans</span></a>
+    <nav id="navMenu" class="nav-menu">
+      <a href="#calculator">Loan calculator</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#apply">Apply</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">SIMPLE • CLEAR • MOBILE-FRIENDLY</p>
+      <h1>Plan your next step<br><span>with confidence.</span></h1>
+      <p class="hero-copy">Explore an estimated repayment and send an enquiry in a few simple steps.</p>
+      <a class="primary-button hero-button" href="#calculator">Calculate a loan <span>↓</span></a>
+      <div class="trust-row">
+        <div><span class="trust-icon">✓</span><span>Clear estimates</span></div>
+        <div><span class="trust-icon">↗</span><span>Simple application</span></div>
+        <div><span class="trust-icon">▣</span><span>Mobile friendly</span></div>
+      </div>
+    </section>
+
+    <section class="panel calculator" id="calculator">
+      <div class="section-heading">
+        <p class="eyebrow">LOAN PLANNER</p>
+        <h2>Loan calculator</h2>
+        <p>Adjust the amount and term to see an illustrative estimate.</p>
+      </div>
+      <div class="field-group">
+        <div class="label-line"><label for="amount">Loan amount</label><output id="amountOutput">$1,000</output></div>
+        <input id="amount" type="range" min="100" max="10000" step="100" value="1000">
+        <div class="range-labels"><span>$100</span><span>$10,000</span></div>
+      </div>
+      <div class="field-group">
+        <div class="label-line"><label for="term">Repayment term</label><output id="termOutput">12 months</output></div>
+        <input id="term" type="range" min="3" max="36" step="3" value="12">
+        <div class="range-labels"><span>3 months</span><span>36 months</span></div>
+      </div>
+      <div class="field-group">
+        <div class="label-line"><label for="rate">Illustrative annual interest</label><output id="rateOutput">12%</output></div>
+        <input id="rate" type="range" min="0" max="36" step="1" value="12">
+        <div class="range-labels"><span>0%</span><span>36%</span></div>
+      </div>
+      <div class="estimate">
+        <div><span>Estimated monthly payment</span><small>Before any fees or other charges</small></div>
+        <strong id="monthlyOutput">$88.85</strong>
+      </div>
+      <p class="disclaimer">This calculator is for demonstration only. It is not a loan offer, approval, or a promise of any interest rate. Actual terms must be disclosed by the lender.</p>
+      <a class="primary-button full-width" href="#apply">Start an enquiry <span>→</span></a>
+    </section>
+
+    <section class="how-section" id="how-it-works">
+      <div class="section-heading centered">
+        <p class="eyebrow">THREE SIMPLE STEPS</p>
+        <h2>How it works</h2>
+      </div>
+      <div class="steps">
+        <article class="step-card"><span class="step-number">01</span><h3>Plan</h3><p>Choose an amount and repayment period that you want to discuss.</p></article>
+        <article class="step-card"><span class="step-number">02</span><h3>Enquire</h3><p>Send your contact details and a short note about your enquiry.</p></article>
+        <article class="step-card"><span class="step-number">03</span><h3>Review</h3><p>A real provider can review the enquiry and explain the next steps.</p></article>
+      </div>
+    </section>
+
+    <section class="panel apply-panel" id="apply">
+      <div class="section-heading">
+        <p class="eyebrow">GET IN TOUCH</p>
+        <h2>Loan enquiry</h2>
+        <p>Complete this short demo form. It does not submit information to a server.</p>
+      </div>
+      <form id="enquiryForm">
+        <div class="form-grid">
+          <div class="form-field"><label for="fullName">Full name</label><input id="fullName" name="fullName" autocomplete="name" required placeholder="Your name"></div>
+          <div class="form-field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="Your contact number"></div>
+          <div class="form-field"><label for="loanType">Enquiry type</label><select id="loanType" name="loanType"><option>Personal loan</option><option>Business loan</option><option>Education loan</option><option>Other</option></select></div>
+          <div class="form-field"><label for="contactMethod">Preferred contact</label><select id="contactMethod" name="contactMethod"><option>Phone call</option><option>SMS</option><option>Email</option></select></div>
+        </div>
+        <div class="form-field"><label for="purpose">What would you like the loan for?</label><textarea id="purpose" name="purpose" rows="3" placeholder="Briefly describe your enquiry (optional)"></textarea></div>
+        <label class="consent"><input type="checkbox" required> <span>I understand this is a demo enquiry form and my details will not be sent anywhere.</span></label>
+        <button class="primary-button full-width" type="submit">Preview enquiry <span>→</span></button>
+        <div id="formMessage" class="form-message" role="status" aria-live="polite"></div>
+      </form>
+      <p class="privacy-note">For a live service, connect a secure backend and publish a privacy notice before collecting customer information. Never ask customers for mobile-money PINs, banking passwords, or OTPs in this form.</p>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#">Easy<span>Loan</span></a>
+    <p>Simple information. Clear next steps.</p>
+    <small>This independent demo is not affiliated with or endorsed by EcoCash or its owners.</small><br>
+    <small>Demo website template • Replace this text with your registered business details.</small>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
